@@ -16,7 +16,7 @@ db.sequelize.sync({ alter: true })
     });
 
 
-//получение записи с указанным фамилией
+//получение записи с фамилией lastName
 app.get('/user/:lastName', async (req, res) => {
     let lastName = req.params.lastName
     let data = await User.findAll({
